@@ -36,7 +36,7 @@ c_val = []
 # Running SVM for various values of C
 for c in [0.001, 0.01, 0.1, 1, 10, 100]:
     print('Running SVM for C = %g' % c)
-    clf = SVC(C = c, gamma = 0.95, kernel='rbf')
+    clf = SVC(C = c, gamma = 1, kernel='rbf')
     clf.fit(x_train, y_train)
     print('Evaluating scores')
     train_err.append(clf.score(x_train, y_train))
